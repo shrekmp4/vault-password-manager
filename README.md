@@ -1,7 +1,7 @@
 # Vault🔐
 Portable password manager open source and completely offline.
 
-[![DOWNLOAD](https://img.shields.io/badge/DOWNLOAD-gray?style=flat&logo=https://img.freepik.com/vector-premium/icono-descarga_159242-32865.jpg&link=https://github.com/shrekmp4)](https://github.com/shrekmp4)
+<a href='https://github.com/shrekmp4' target="_blank"><img alt='Download' src='https://img.shields.io/badge/Latest_version-100000?style=for-the-badge&logo=Download&logoColor=FF0D0D&labelColor=black&color=FFFFFF'/></a>
 [![download_latest](https://img.shields.io/github/v/release/devpelux/vault?include_prereleases&label=LATEST%20RELEASE&sort=semver&style=for-the-badge)](https://github.com/devpelux/vault/releases)
 
 

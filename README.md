@@ -1,9 +1,9 @@
 # Vault🔐
 Portable password manager open source and completely offline.
-![Banner](https://www.educ.cam.ac.uk/images/it/strong-password-banner.jpg)
 
 [![download](https://img.shields.io/github/v/release/devpelux/vault?label=DOWNLOAD&sort=semver&style=for-the-badge)](https://github.com/devpelux/vault/releases/latest)
 [![download_latest](https://img.shields.io/github/v/release/devpelux/vault?include_prereleases&label=LATEST%20RELEASE&sort=semver&style=for-the-badge)](https://github.com/devpelux/vault/releases)
+![Banner](https://www.educ.cam.ac.uk/images/it/strong-password-banner.jpg)
 
 
 # Single file executable

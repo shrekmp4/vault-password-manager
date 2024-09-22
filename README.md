@@ -27,8 +27,8 @@ All data are yours! Only you have the control!
 This also means that if you lost your data no one will be able to retrieve them anymore...
 Just backup everything into an external pendrive, this app can be loaded also from pendrives.
 
-# Resume of the app
-![Fast Resume](https://media.discordapp.net/attachments/1271973792356499620/1287424560572141609/2024-09-22-16-42-24.gif?ex=66f17f0e&is=66f02d8e&hm=082791cc19cea81b94e4987d8b54436126f3c07c8276bf3c6eb0ad44a056c372&=&width=1193&height=671)
+# Login Preview
+![Login Preview](https://media.discordapp.net/attachments/1271973792356499620/1287425288006795304/2024-09-22-16-48-14.gif?ex=66f17fbb&is=66f02e3b&hm=e955746878b4c7c4f301fb6c51834ce3048241201fc935c4204cc0c378313d64&=&width=1193&height=671)
 
 # License
 Copyright (C) 2024 srkdev (shrekmp4)  

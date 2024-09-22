@@ -1,0 +1,128 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <StartupObject>Vault.App</StartupObject>
+    <Version>1.0.0-pre.4</Version>
+    <ApplicationIcon>Icons\icon.ico</ApplicationIcon>
+    <Authors>devpelux</Authors>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/devpelux/vault</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageProjectUrl>https://github.com/shrekmp4/vault</PackageProjectUrl>
+    <Copyright>Copyright (C) 2024 srkdev (Shrekmp4)</Copyright>
+    <Description>Portable password manager open source and completely offline.</Description>
+    <PackageTags>vault password-manager offline sqlcipher fluent-design wpf</PackageTags>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+	<None Remove="Icons\icon.ico" />
+    <None Remove="Icons\ic_asterisk.png" />
+    <None Remove="Icons\ic_bank.png" />
+    <None Remove="Icons\ic_card.png" />
+    <None Remove="Icons\ic_done.png" />
+    <None Remove="Icons\ic_exclamation.png" />
+    <None Remove="Icons\ic_hand.png" />
+    <None Remove="Icons\ic_hourglass.png" />
+    <None Remove="Icons\ic_label.png" />
+    <None Remove="Icons\ic_lock.png" />
+    <None Remove="Icons\ic_notes.png" />
+    <None Remove="Icons\ic_question.png" />
+    <None Remove="Icons\ic_search.png" />
+    <None Remove="Icons\ic_user.png" />
+    <None Remove="Icons\ic_world.ico" />
+    <None Remove="Icons\ic_world.png" />
+    <None Remove="Icons\tray_locked.ico" />
+    <None Remove="Icons\tray_unlocked.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\.editorconfig" Link=".editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FullControls" Version="2.0.3" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0-g3672b4e3c1" />
+    <PackageReference Include="Microsoft.Data.Sqlite.Core" Version="6.0.5" />
+    <PackageReference Include="Nucs.JsonSettings" Version="2.0.0-alpha7" />
+    <PackageReference Include="SQLitePCLRaw.bundle_e_sqlcipher" Version="2.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Icons\icon.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+	</Resource>
+    <Resource Include="Icons\ic_asterisk.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_bank.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_card.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_done.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_exclamation.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_hand.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_hourglass.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_label.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_lock.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_notes.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_question.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_search.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_user.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\ic_world.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\tray_unlocked.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Icons\tray_locked.ico">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Properties\Strings.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Strings.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Properties\Strings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Strings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Properties\Strings.it-IT.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,230 @@
+﻿<fc:AvalonWindow x:Class="Vault.HomeWindow"
+                 xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                 xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 xmlns:cust="clr-namespace:Vault.Core.Controls"
+                 xmlns:fc="http://devpelux.github.io/fullcontrols"
+                 xmlns:p="clr-namespace:Vault.Properties"
+                 mc:Ignorable="d"
+                 Style="{StaticResource DarkAvalonWindow}"
+                 TitleMargin="16,0,0,0"
+                 Title="{x:Static p:Strings.AppName}"
+                 Height="700"
+                 Width="800"
+                 MergeTitlebarAndContent="True"
+                 WindowStartupLocation="CenterScreen"
+                 ResizeMode="CanMinimize"
+                 Loaded="Window_Loaded"
+                 Closed="Window_Closed">
+
+    <Grid Margin="0,0,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="48" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Row="1"
+              Grid.Column="0"
+              Width="180"
+              Margin="8,4,8,8">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+
+            <fc:TextBoxPlus x:Name="Search"
+                            Grid.Row="0"
+                            Style="{StaticResource DarkTextBoxPlus}"
+                            Height="32"
+                            Margin="12"
+                            Hint="{x:Static p:Strings.Search}"
+                            Icon="Icons/ic_search.png"
+                            LabelPlacement="Left"
+                            LabelMargin="0,0,6,0"
+                            LabelMaxHeight="18"
+                            TextChanged="Search_TextChanged" />
+
+            <fc:Switcher x:Name="ShowPasswords"
+                         Grid.Row="1"
+                         Style="{StaticResource DarkNavigationSwitcher}"
+                         GroupName="Navigation"
+                         Checked="Navigation_Switch"
+                         Content="{x:Static p:Strings.Passwords}"
+                         VerticalAlignment="Top"
+                         HorizontalContentAlignment="Left"
+                         Height="36"
+                         Margin="0,2,0,2"
+                         Tag="{StaticResource PasswordsSection}" />
+
+            <fc:Switcher x:Name="ShowNotes"
+                         Grid.Row="2"
+                         Style="{StaticResource DarkNavigationSwitcher}"
+                         GroupName="Navigation"
+                         Checked="Navigation_Switch"
+                         Content="{x:Static p:Strings.Notes}"
+                         VerticalAlignment="Top"
+                         HorizontalContentAlignment="Left"
+                         Height="36"
+                         Margin="0,2,0,2"
+                         Tag="{StaticResource NotesSection}" />
+
+            <fc:Switcher x:Name="ShowCards"
+                         Grid.Row="3"
+                         Style="{StaticResource DarkNavigationSwitcher}"
+                         GroupName="Navigation"
+                         Checked="Navigation_Switch"
+                         Content="{x:Static p:Strings.Cards}"
+                         VerticalAlignment="Top"
+                         HorizontalContentAlignment="Left"
+                         Height="36"
+                         Margin="0,2,0,2"
+                         Tag="{StaticResource CardsSection}" />
+
+            <fc:Switcher x:Name="ShowDocuments"
+                         Grid.Row="4"
+                         Style="{StaticResource DarkNavigationSwitcher}"
+                         GroupName="Navigation"
+                         Checked="Navigation_Switch"
+                         Content="{x:Static p:Strings.Documents}"
+                         VerticalAlignment="Top"
+                         HorizontalContentAlignment="Left"
+                         Height="36"
+                         Margin="0,2,0,2"
+                         Tag="{StaticResource DocumentsSection}" />
+
+            <fc:FlatMenuSeparator Grid.Row="5"
+                                  Style="{StaticResource DarkFlatMenuSeparator}"
+                                  Padding="0"
+                                  Margin="-8,0,-8,0" />
+
+            <fc:ButtonPlus x:Name="ShowCategories"
+                           Grid.Row="6"
+                           Style="{StaticResource DarkNavigationButton}"
+                           Click="ShowCategories_Click"
+                           Content="{x:Static p:Strings.Categories}"
+                           VerticalAlignment="Top"
+                           HorizontalContentAlignment="Left"
+                           Height="36"
+                           Margin="0,2,0,2" />
+
+            <fc:FlatMenuSeparator Grid.Row="7"
+                                  Style="{StaticResource DarkFlatMenuSeparator}"
+                                  Padding="0"
+                                  Margin="-8,0,-8,0" />
+
+            <fc:ButtonPlus x:Name="ShowReport"
+                           Grid.Row="8"
+                           Style="{StaticResource DarkNavigationButton}"
+                           Click="ShowReport_Click"
+                           Content="{x:Static p:Strings.Report}"
+                           VerticalAlignment="Top"
+                           HorizontalContentAlignment="Left"
+                           Height="36"
+                           Margin="0,2,0,2" />
+
+            <fc:ButtonPlus x:Name="ShowSettings"
+                           Grid.Row="9"
+                           Style="{StaticResource DarkNavigationButton}"
+                           Click="ShowSettings_Click"
+                           Content="{x:Static p:Strings.Settings}"
+                           VerticalAlignment="Top"
+                           HorizontalContentAlignment="Left"
+                           Height="36"
+                           Margin="0,2,0,2" />
+
+            <fc:ButtonPlus x:Name="ExecuteLogout"
+                           Grid.Row="10"
+                           Style="{StaticResource DarkNavigationButton}"
+                           Click="ExecuteLogout_Click"
+                           Content="{x:Static p:Strings.Logout}"
+                           VerticalAlignment="Top"
+                           HorizontalContentAlignment="Left"
+                           Height="36"
+                           Margin="0,2,0,2" />
+        </Grid>
+
+        <Border Grid.Row="1"
+                Grid.Column="1"
+                CornerRadius="8,0,0,0"
+                BorderThickness="1,1,0,0"
+                Background="{StaticResource DarkWindowSecondaryBackground}"
+                BorderBrush="{StaticResource DarkWindowSecondaryBorder}">
+
+            <Grid Margin="32">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+
+                <TextBlock x:Name="SectionName"
+                           Grid.Row="0"
+                           Text="Section"
+                           FontSize="20"
+                           Foreground="White"
+                           HorizontalAlignment="Left"
+                           VerticalAlignment="Center"
+                           Margin="10,0,0,0" />
+
+                <fc:ButtonPlus x:Name="Add"
+                               Style="{StaticResource DarkButtonPlus}"
+                               Grid.Row="0"
+                               VerticalAlignment="Top"
+                               HorizontalAlignment="Right"
+                               BorderThickness="0"
+                               Background="{StaticResource DarkWindowSecondaryBackground}"
+                               Margin="0,10,20,10"
+                               Padding="10,0,10,0"
+                               Height="36"
+                               AnimationTime="00:00:00.2000000"
+                               Content="{x:Static p:Strings.Add}"
+                               Click="Add_Click" />
+
+                <fc:GlassScrollViewer Grid.Row="1"
+                                      Margin="10">
+
+                    <fc:Accordion x:Name="SectionList"
+                                  ItemIsExpandedChanged="SectionList_ItemIsExpandedChanged">
+
+                        <fc:Accordion.Resources>
+                            <ResourceDictionary>
+                                <DataTemplate x:Key="SectionListItemTemplate">
+
+                                    <cust:DataItem Style="{StaticResource DarkDataItem}"
+                                                   Tag="{Binding Id}"
+                                                   Header="{Binding Header}"
+                                                   SubHeader="{Binding SubHeader}"
+                                                   IsLocked="{Binding IsLocked}"
+                                                   Position="{Binding Position}"
+                                                   MouseLeftButtonDown="DataItem_MouseLeftButtonDown" />
+
+                                </DataTemplate>
+                            </ResourceDictionary>
+                        </fc:Accordion.Resources>
+
+                    </fc:Accordion>
+
+                </fc:GlassScrollViewer>
+                
+            </Grid>
+        </Border>
+
+    </Grid>
+</fc:AvalonWindow>

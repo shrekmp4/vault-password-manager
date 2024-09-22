@@ -1,0 +1,19 @@
+﻿<Application x:Class="Vault.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             ShutdownMode="OnExplicitShutdown"
+             Startup="Application_Startup"
+             Exit="Application_Exit">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/FullControls;component/Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/FullControls;component/Dark.xaml" />
+                <ResourceDictionary Source="/Vault;component/Resources/Generic.xaml" />
+                <ResourceDictionary Source="/Vault;component/Resources/DarkTheme.xaml" />
+                <ResourceDictionary Source="/Vault;component/Resources/ContextMenus.xaml" />
+                <ResourceDictionary Source="/Vault;component/Resources/TrayIcon.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

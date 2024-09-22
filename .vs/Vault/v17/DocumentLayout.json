@@ -1,0 +1,276 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:.editorconfig||{68B46364-D378-42F2-9E72-37D86C5F4468}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\resources\\darktheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\resources\\darktheme.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\resources\\contextmenus.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\resources\\contextmenus.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\cardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\cardwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\weakpasswordswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\weakpasswordswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\settingswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\reportwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\reportwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\passwordwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\notewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\notewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\messagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\messagewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\homewindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\credentialswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\credentialswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\confirmwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\confirmwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|e:\\personal\\1seguridad\\pass\\nueva carpeta\\vault-main\\vault-main\\vault\\categorieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\categorieswindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\vault\\vault.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{53B0AF80-7CB7-4656-9DEF-9F586D3BDDE3}|Vault\\Vault.csproj|solutionrelative:vault\\vault.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": ".editorconfig",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\.editorconfig",
+              "RelativeDocumentMoniker": ".editorconfig",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\.editorconfig",
+              "RelativeToolTip": ".editorconfig",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001001|",
+              "WhenOpened": "2024-09-22T18:07:41.287Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DarkTheme.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Resources\\DarkTheme.xaml",
+              "RelativeDocumentMoniker": "Vault\\Resources\\DarkTheme.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Resources\\DarkTheme.xaml",
+              "RelativeToolTip": "Vault\\Resources\\DarkTheme.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:35.765Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ContextMenus.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Resources\\ContextMenus.xaml",
+              "RelativeDocumentMoniker": "Vault\\Resources\\ContextMenus.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Resources\\ContextMenus.xaml",
+              "RelativeToolTip": "Vault\\Resources\\ContextMenus.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:32.952Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CardWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CardWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\CardWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CardWindow.xaml",
+              "RelativeToolTip": "Vault\\CardWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:18.506Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "App.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\App.xaml",
+              "RelativeDocumentMoniker": "Vault\\App.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\App.xaml",
+              "RelativeToolTip": "Vault\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:16.653Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "WeakPasswordsWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\WeakPasswordsWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\WeakPasswordsWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\WeakPasswordsWindow.xaml",
+              "RelativeToolTip": "Vault\\WeakPasswordsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:13.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "ReportWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\ReportWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\ReportWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\ReportWindow.xaml",
+              "RelativeToolTip": "Vault\\ReportWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:07.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "PasswordWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\PasswordWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\PasswordWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\PasswordWindow.xaml",
+              "RelativeToolTip": "Vault\\PasswordWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:05.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "NoteWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\NoteWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\NoteWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\NoteWindow.xaml",
+              "RelativeToolTip": "Vault\\NoteWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:07:03.58Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "MessageWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\MessageWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\MessageWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\MessageWindow.xaml",
+              "RelativeToolTip": "Vault\\MessageWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:04:37.814Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "HomeWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\HomeWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\HomeWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\HomeWindow.xaml",
+              "RelativeToolTip": "Vault\\HomeWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:04:37.12Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "CredentialsWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CredentialsWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\CredentialsWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CredentialsWindow.xaml",
+              "RelativeToolTip": "Vault\\CredentialsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:04:36.412Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ConfirmWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\ConfirmWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\ConfirmWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\ConfirmWindow.xaml",
+              "RelativeToolTip": "Vault\\ConfirmWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:04:35.512Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "SettingsWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\SettingsWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\SettingsWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\SettingsWindow.xaml",
+              "RelativeToolTip": "Vault\\SettingsWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T17:59:55.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CategoriesWindow.xaml",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CategoriesWindow.xaml",
+              "RelativeDocumentMoniker": "Vault\\CategoriesWindow.xaml",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\CategoriesWindow.xaml",
+              "RelativeToolTip": "Vault\\CategoriesWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-09-22T18:04:18.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Vault.csproj",
+              "DocumentMoniker": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Vault.csproj",
+              "RelativeDocumentMoniker": "Vault\\Vault.csproj",
+              "ToolTip": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Vault.csproj",
+              "RelativeToolTip": "Vault\\Vault.csproj",
+              "ViewState": "AQIAAGYAAAAAAAAAAAAAAHQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-22T14:36:58.091Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

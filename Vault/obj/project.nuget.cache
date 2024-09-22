@@ -1,0 +1,50 @@
+{
+  "version": 2,
+  "dgSpecHash": "JMUcIycj26+50yaZtISUVa+GCZo1wFqvy6yT3wtGjifQXlmJIGldQDQ2zvCXqhT1q68s2VhlVsXtGCqnlzjNhw==",
+  "success": true,
+  "projectFilePath": "E:\\Personal\\1Seguridad\\PASS\\Nueva carpeta\\vault-main\\vault-main\\Vault\\Vault.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\droma\\.nuget\\packages\\coretools\\1.2.0\\coretools.1.2.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\fullcontrols\\2.0.3\\fullcontrols.2.0.3.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\hardcodet.notifyicon.wpf\\1.1.0\\hardcodet.notifyicon.wpf.1.1.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.5\\microsoft.data.sqlite.core.6.0.5.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\microsoft.netcore.targets\\1.1.0\\microsoft.netcore.targets.1.1.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\microsoft.win32.systemevents\\6.0.0\\microsoft.win32.systemevents.6.0.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\nucs.jsonsettings\\2.0.0-alpha7\\nucs.jsonsettings.2.0.0-alpha7.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\sqlitepclraw.bundle_e_sqlcipher\\2.0.7\\sqlitepclraw.bundle_e_sqlcipher.2.0.7.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\sqlitepclraw.core\\2.0.7\\sqlitepclraw.core.2.0.7.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\sqlitepclraw.lib.e_sqlcipher\\2.0.7\\sqlitepclraw.lib.e_sqlcipher.2.0.7.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\sqlitepclraw.provider.e_sqlcipher\\2.0.7\\sqlitepclraw.provider.e_sqlcipher.2.0.7.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.diagnostics.debug\\4.3.0\\system.diagnostics.debug.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.drawing.common\\6.0.0\\system.drawing.common.6.0.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.globalization\\4.3.0\\system.globalization.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.io\\4.3.0\\system.io.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.reflection.primitives\\4.3.0\\system.reflection.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.resources.resourcemanager\\4.3.0\\system.resources.resourcemanager.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.runtime\\4.3.0\\system.runtime.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.runtime.handles\\4.3.0\\system.runtime.handles.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.security.cryptography.primitives\\4.3.0\\system.security.cryptography.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.security.securestring\\4.3.0\\system.security.securestring.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
+    "C:\\Users\\droma\\.nuget\\packages\\wpfcoretools\\1.5.0\\wpfcoretools.1.5.0.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1603",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Vault depende de Hardcodet.NotifyIcon.Wpf (>= 1.1.0-g3672b4e3c1), pero no se encontró Hardcodet.NotifyIcon.Wpf 1.1.0-g3672b4e3c1. Se resolvió una mejor coincidencia aproximada de Hardcodet.NotifyIcon.Wpf 1.1.0.",
+      "libraryId": "Hardcodet.NotifyIcon.Wpf",
+      "targetGraphs": [
+        "net6.0-windows7.0"
+      ]
+    }
+  ]
+}

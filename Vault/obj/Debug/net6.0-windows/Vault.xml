@@ -1,0 +1,3123 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Vault</name>
+    </assembly>
+    <members>
+        <member name="T:Vault.App">
+            <summary>
+            Start point.
+            </summary>
+            <summary>
+            App
+            </summary>
+        </member>
+        <member name="P:Vault.App.AppName">
+            <summary>
+            Gets the application name.
+            </summary>
+        </member>
+        <member name="P:Vault.App.CurrentDirectory">
+            <summary>
+            Gets the current executing directory.
+            </summary>
+        </member>
+        <member name="P:Vault.App.CurrentExecutable">
+            <summary>
+            Gets the current executing file.
+            </summary>
+        </member>
+        <member name="P:Vault.App.IsHided">
+            <summary>
+            Gets a value indicating if there are no windows displayed.
+            </summary>
+        </member>
+        <member name="M:Vault.App.GetDBPath(System.String)">
+            <summary>
+            Gets the database path for the specified username.
+            </summary>
+        </member>
+        <member name="M:Vault.App.Application_Startup(System.Object,System.Windows.StartupEventArgs)">
+            <summary>
+            Called when the application is started.
+            Initializes the tray icon and eventually starts the credentials window.
+            </summary>
+        </member>
+        <member name="M:Vault.App.Application_Exit(System.Object,System.Windows.ExitEventArgs)">
+            <summary>
+            Called when the application is terminated.
+            Disposes all the resources.
+            </summary>
+        </member>
+        <member name="M:Vault.App.CheckAndFixSettings">
+            <summary>
+            Checks if the "config.json" file is ok and, eventually, resets the file.
+            </summary>
+        </member>
+        <member name="M:Vault.App.StartSession(System.String,System.String)">
+            <summary>
+            Starts a new session.
+            </summary>
+        </member>
+        <member name="M:Vault.App.TerminateSession">
+            <summary>
+            Terminates the current session.
+            </summary>
+        </member>
+        <member name="M:Vault.App.RequestShutDown(System.Object)">
+            <summary>
+            Request to shutdown the application.
+            The application will be closed if is not requested the explicit exit (hide on close and exit by context menu)
+            and there is no window opened.
+            </summary>
+        </member>
+        <member name="M:Vault.App.GetVersionCode">
+            <summary>
+            Gets the current version number for the application.
+            </summary>
+        </member>
+        <member name="M:Vault.App.SetCurrentLanguage(Vault.App.Language)">
+            <summary>
+            Sets the current application language.
+            </summary>
+        </member>
+        <member name="T:Vault.App.Language">
+            <summary>
+            Represents a language zone.
+            </summary>
+        </member>
+        <member name="F:Vault.App.Language.System">
+            <summary>
+            System language.
+            </summary>
+        </member>
+        <member name="F:Vault.App.Language.enUS">
+            <summary>
+            English (United States).
+            </summary>
+        </member>
+        <member name="F:Vault.App.Language.itIT">
+            <summary>
+            Italian (Italy).
+            </summary>
+        </member>
+        <member name="M:Vault.App.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="M:Vault.App.Main">
+            <summary>
+            Application Entry Point.
+            </summary>
+        </member>
+        <member name="T:Vault.CardWindow">
+            <summary>
+            Window for display and edit a card.
+            </summary>
+            <summary>
+            CardWindow
+            </summary>
+        </member>
+        <member name="F:Vault.CardWindow.Result">
+            <summary>
+            Result: "edited", "deleted", null = nothing. (default: null)
+            </summary>
+        </member>
+        <member name="M:Vault.CardWindow.#ctor(Vault.Core.Database.Data.Card)">
+            <summary>
+            Initializes a new <see cref="T:Vault.CardWindow"/> with the specified card.
+            If the card is null, the window will create a new card, otherwise will display and edit the specified card.
+            </summary>
+        </member>
+        <member name="M:Vault.CardWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.CardWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the card details.
+            </summary>
+        </member>
+        <member name="M:Vault.CardWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the save button is clicked.
+            Edits the card if is not null, otherwise creates a new card.
+            </summary>
+        </member>
+        <member name="M:Vault.CardWindow.Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the delete button is clicked.
+            Deletes the card if is not null.
+            </summary>
+        </member>
+        <member name="M:Vault.CardWindow.AddCard">
+            <summary>
+            Adds a new card.
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:Vault.CardWindow.EditCard">
+            <summary>
+            Edits the card.
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:Vault.CardWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.CategoriesWindow">
+            <summary>
+            Window for managing the categories.
+            </summary>
+            <summary>
+            CategoriesWindow
+            </summary>
+        </member>
+        <member name="F:Vault.CategoriesWindow.EditResult">
+            <summary>
+            EditResult: false = no edits, true = edits. (default: false)
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Vault.CategoriesWindow"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.CategoriesWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the categories details.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.Reload">
+            <summary>
+            Reloads the categories details.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.Category_Checked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when a category is checked.
+            Loads the category details to edit it.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.Category_Unchecked(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when a category is unchecked.
+            Cleans the category details.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.Window_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Executed when a key is pressed.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.SaveCategory">
+            <summary>
+            Saves the details for the edited category or the new category.
+            </summary>
+        </member>
+        <member name="M:Vault.CategoriesWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.ConfirmWindow">
+            <summary>
+            Window for dialog boxes.
+            </summary>
+            <summary>
+            ConfirmWindow
+            </summary>
+        </member>
+        <member name="F:Vault.ConfirmWindow.Result">
+            <summary>
+            Result: false = no, true = yes. (default: false)
+            </summary>
+        </member>
+        <member name="P:Vault.ConfirmWindow.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:Vault.ConfirmWindow.IconType">
+            <summary>
+            Gets or sets the icon type.
+            </summary>
+        </member>
+        <member name="M:Vault.ConfirmWindow.#ctor(System.String,System.String,System.Windows.MessageBoxImage)">
+            <summary>
+            Initializes a new <see cref="T:Vault.ConfirmWindow"/> with a message, a title, and an icon type.
+            </summary>
+        </member>
+        <member name="M:Vault.ConfirmWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.ConfirmWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the icon and plays the relative sound.
+            </summary>
+        </member>
+        <member name="M:Vault.ConfirmWindow.Yes_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the yes button is clicked.
+            Sets the result to true (yes), then closes the window.
+            </summary>
+        </member>
+        <member name="M:Vault.ConfirmWindow.No_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the no button is clicked.
+            Sets the result to false (no), then closes the window.
+            </summary>
+        </member>
+        <member name="M:Vault.ConfirmWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.DataItem">
+            <summary>
+            Displays a preview of a <see cref="T:Vault.Core.Database.Data.Data"/> type with a header and a sub-header.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.BackgroundOnMouseOver">
+            <summary>
+            Gets or sets the bakground brush when the mouse is over the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.BackgroundOnMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.BackgroundOnMouseOver"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.ActualBackground">
+            <summary>
+            Gets the actual background brush of the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBackgroundPropertyKey">
+            <summary>
+            The <see cref="T:System.Windows.DependencyPropertyKey"/> for <see cref="P:Vault.Core.Controls.DataItem.ActualBackground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBackgroundProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.ActualBackground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBackgroundPropertyProxy">
+            <summary>
+            Proxy for <see cref="P:Vault.Core.Controls.DataItem.ActualBackground"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.BorderBrushOnMouseOver">
+            <summary>
+            Gets or sets the border brush when the mouse is over the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.BorderBrushOnMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.BorderBrushOnMouseOver"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.ActualBorderBrush">
+            <summary>
+            Gets the actual border brush of the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBorderBrushPropertyKey">
+            <summary>
+            The <see cref="T:System.Windows.DependencyPropertyKey"/> for <see cref="P:Vault.Core.Controls.DataItem.ActualBorderBrush"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBorderBrushProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.ActualBorderBrush"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualBorderBrushPropertyProxy">
+            <summary>
+            Proxy for <see cref="P:Vault.Core.Controls.DataItem.ActualBorderBrush"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.Header">
+            <summary>
+            Gets or sets the header.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.HeaderProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.Header"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.SubHeader">
+            <summary>
+            Gets or sets the sub-header.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.SubHeaderProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.SubHeader"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.HeaderForeground">
+            <summary>
+            Gets or sets the header foreground brush.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.HeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.HeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.HeaderForegroundOnMouseOver">
+            <summary>
+            Gets or sets the header foreground brush when the mouse is over the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.HeaderForegroundOnMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.HeaderForegroundOnMouseOver"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.ActualHeaderForeground">
+            <summary>
+            Gets the actual header foreground brush.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualHeaderForegroundPropertyKey">
+            <summary>
+            The <see cref="T:System.Windows.DependencyPropertyKey"/> for <see cref="P:Vault.Core.Controls.DataItem.ActualHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualHeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.ActualHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualHeaderForegroundPropertyProxy">
+            <summary>
+            Proxy for <see cref="P:Vault.Core.Controls.DataItem.ActualHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.SubHeaderForeground">
+            <summary>
+            Gets or sets the sub-header foreground brush.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.SubHeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.SubHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.SubHeaderForegroundOnMouseOver">
+            <summary>
+            Gets or sets the sub-header foreground brush when the mouse is over the control.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.SubHeaderForegroundOnMouseOverProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.SubHeaderForegroundOnMouseOver"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.ActualSubHeaderForeground">
+            <summary>
+            Gets the actual sub-header foreground brush.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualSubHeaderForegroundPropertyKey">
+            <summary>
+            The <see cref="T:System.Windows.DependencyPropertyKey"/> for <see cref="P:Vault.Core.Controls.DataItem.ActualSubHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualSubHeaderForegroundProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.ActualSubHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.ActualSubHeaderForegroundPropertyProxy">
+            <summary>
+            Proxy for <see cref="P:Vault.Core.Controls.DataItem.ActualSubHeaderForeground"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.HeaderFontSize">
+            <summary>
+            Gets or sets the header font size.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.HeaderFontSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.HeaderFontSize"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.SubHeaderFontSize">
+            <summary>
+            Gets or sets the sub-header font size.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.SubHeaderFontSizeProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.SubHeaderFontSize"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.CornerRadius">
+            <summary>
+            Gets or sets the corner radius to set the roundness of the corners.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.CornerRadiusProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.CornerRadius"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.AnimationTime">
+            <summary>
+            Gets or sets the duration of the control animation when it changes state.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.AnimationTimeProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.AnimationTime"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.IsLocked">
+            <summary>
+            Gets or sets a value indicating if the displayed data is locked.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.IsLockedProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.Position"/> dependency property.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItem.Position">
+            <summary>
+            Gets or sets the position of the item.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.PositionProperty">
+            <summary>
+            Identifies the <see cref="P:Vault.Core.Controls.DataItem.Position"/> dependency property.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Controls.DataItem"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.OnApplyTemplate">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.OnLoaded(System.Windows.RoutedEventArgs)">
+            <summary>
+            Called when the element is laid out, rendered, and ready for interaction.
+            </summary>
+            <param name="e">Event data.</param>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.GetCurrentVState">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItem.OnVStateChanged(FullControls.Common.VState,System.Boolean)">
+            <summary>
+            Called when the current <see cref="T:FullControls.Common.VState"/> is changed.
+            </summary>
+            <param name="vstate">Current <see cref="T:FullControls.Common.VState"/>.</param>
+            <param name="initial">Specifies if this is the initial <see cref="T:FullControls.Common.VState"/>.</param>
+        </member>
+        <member name="T:Vault.Core.Controls.DataItem.VStates">
+            <summary>
+            Control v-states.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.VStates.DEFAULT">
+            <summary>
+            Default state.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItem.VStates.MOUSE_OVER">
+            <summary>
+            The mouse is over the control.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.DataItemAdapter">
+            <summary>
+            Adapter to adapt a <see cref="T:Vault.Core.Database.Data.Data"/> element to be displayed into a <see cref="T:Vault.Core.Controls.DataItem"/>.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItemAdapter.Id">
+            <summary>
+            Gets the id of the the data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItemAdapter.IsLocked">
+            <summary>
+            Gets a value indicating if the data is locked.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItemAdapter.Header">
+            <summary>
+            Gets the header representing the data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItemAdapter.SubHeader">
+            <summary>
+            Gets the sub-header representing the data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.DataItemAdapter.Position">
+            <summary>
+            Gets a value indicating the position of the item.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.DataItemAdapter.#ctor(Vault.Core.Database.Data.Data)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Controls.DataItemAdapter"/> with the specified <see cref="T:Vault.Core.Database.Data.Data"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.DataItemAdapter.ItemPosition">
+            <summary>
+            Represents the position of the item.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItemAdapter.ItemPosition.First">
+            <summary>
+            First element.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItemAdapter.ItemPosition.Middle">
+            <summary>
+            Middle element.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.DataItemAdapter.ItemPosition.Last">
+            <summary>
+            Last element.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.FieldCommands">
+            <summary>
+            Handles the copy and replace commands for the fields.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.FieldCommands.CopyValue">
+            <summary>
+            Command to copy a value from a field.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.FieldCommands.ReplaceValue">
+            <summary>
+            Command to replace a value of a field.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.FieldCommands.AddFieldCommands(System.Windows.Input.CommandBindingCollection)">
+            <summary>
+            Adds the field commands to the specified <see cref="T:System.Windows.Input.CommandBindingCollection"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.FieldCommands.OnCopyValueCanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Enables copying value if the field has text.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.FieldCommands.OnReplaceValueCanExecute(System.Object,System.Windows.Input.CanExecuteRoutedEventArgs)">
+            <summary>
+            Enables replacing value if the clipboard has text.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.FieldCommands.OnCopyValueExecuted(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            Copies the value from a field.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.FieldCommands.OnReplaceValueExecuted(System.Object,System.Windows.Input.ExecutedRoutedEventArgs)">
+            <summary>
+            Replaces the value of a field.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.TrayIcon">
+            <summary>
+            Tray icon singleton that manages showing and hiding the tray icon, and some icon features.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIcon.Instance">
+            <summary>
+            Gets the instance of the <see cref="T:Vault.Core.Controls.TrayIcon"/> manager.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.#ctor">
+            <summary>
+            Initializes a new instance of the <see cref="T:Vault.Core.Controls.TrayIcon"/> manager.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIcon.IsDisplayed">
+            <summary>
+            Checks if the icon is actually displayed.
+            </summary>
+        </member>
+        <member name="E:Vault.Core.Controls.TrayIcon.LogoutCommandExecuted">
+            <summary>
+            Occurs when the logout command is executed.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.SetIconType(Vault.Core.Controls.TrayIconType)">
+            <summary>
+            Sets the tray icon type.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.Show">
+            <summary>
+            Displays a new instance of the tray icon.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.Hide">
+            <summary>
+            Hides and disposes the tray icon.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.OnShowCommandExecuted(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the show command is executed.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.OnExitCommandExecuted(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the exit command is executed.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.OnLogoutCommandExecuted(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the logout command is executed.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.Dispose">
+            <summary>
+            Hides and disposes the tray icon.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.DisposeInstance">
+            <summary>
+            Disposes the current instance.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIcon.ShowLastWindow">
+            <summary>
+            Shows the last window, if there is a last window to show.
+            Otherwise executes a log out.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.TrayIconDC">
+            <summary>
+            Represents the data context for the tray icon.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIconDC.IconType">
+            <summary>
+            Gets or sets the current icon type.
+            </summary>
+        </member>
+        <member name="E:Vault.Core.Controls.TrayIconDC.PropertyChanged">
+            <inheritdoc/>
+        </member>
+        <member name="E:Vault.Core.Controls.TrayIconDC.ShowCommandExecuted">
+            <summary>
+            Occurs when the show command is executed.
+            </summary>
+        </member>
+        <member name="E:Vault.Core.Controls.TrayIconDC.ExitCommandExecuted">
+            <summary>
+            Occurs when the exit command is executed.
+            </summary>
+        </member>
+        <member name="E:Vault.Core.Controls.TrayIconDC.LogoutCommandExecuted">
+            <summary>
+            Occurs when the logout command is executed.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIconDC.TrayCommandShow">
+            <summary>
+            Command to show the application, if hidden.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIconDC.TrayCommandExit">
+            <summary>
+            Command to close the application.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Controls.TrayIconDC.TrayCommandLogout">
+            <summary>
+            Command to log out.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Controls.TrayIconDC.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Controls.TrayIconDC"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Controls.TrayIconType">
+            <summary>
+            Defines which icon type is used as tray icon.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.TrayIconType.Locked">
+            <summary>
+            Tray icon representing the locked status of the vault.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Controls.TrayIconType.Unlocked">
+            <summary>
+            Tray icon representing the unlocked status of the vault.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Card">
+            <summary>
+            Represents a card data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Owner">
+            <summary>
+            Gets or sets the owner.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Number">
+            <summary>
+            Gets or sets the number.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Type">
+            <summary>
+            Gets or sets the type.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Cvv">
+            <summary>
+            Gets or sets the cvv.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Iban">
+            <summary>
+            Gets or sets the iban.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Expiration">
+            <summary>
+            Gets or sets the expiration.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Notes">
+            <summary>
+            Gets or sets the notes.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.Header">
+            <inheritdoc/>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Card.SubHeader">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Card.#ctor(System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Card"/> without id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Card.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.String,System.String,System.String,System.Int64,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Card"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Category">
+            <summary>
+            Represents a category with a name.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Category.None">
+            <summary>
+            Represents the default "none" category.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Category.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Category.Label">
+            <summary>
+            Gets or sets the label.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Category.IsExpanded">
+            <summary>
+            Gets or sets a value indicating if the corrisponding accordion item should be expanded.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.#ctor(System.String,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Category"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.Equals(Vault.Core.Database.Data.Category)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.op_Equality(Vault.Core.Database.Data.Category,Vault.Core.Database.Data.Category)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Category.op_Inequality(Vault.Core.Database.Data.Category,Vault.Core.Database.Data.Category)">
+            <inheritdoc/>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Data">
+            <summary>
+            Represents a data contained in the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Data.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Data.Category">
+            <summary>
+            Gets or sets the category.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Data.IsLocked">
+            <summary>
+            Gets or sets a value indicating if the data is locked.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Data.Header">
+            <summary>
+            Gets the header representing the data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Data.SubHeader">
+            <summary>
+            Gets the sub-header representing the data.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Data.#ctor(System.Int32,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Data"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Document">
+            <summary>
+            Represents a document data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Name">
+            <summary>
+            Gets or sets the name.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Owner">
+            <summary>
+            Gets or sets the owner.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Code">
+            <summary>
+            Gets or sets the code.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Expiration">
+            <summary>
+            Gets or sets the expiration.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Notes">
+            <summary>
+            Gets or sets the notes.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.Header">
+            <inheritdoc/>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Document.SubHeader">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Document.#ctor(System.String,System.String,System.String,System.String,System.Int64,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Document"/> without id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Document.#ctor(System.Int32,System.String,System.String,System.String,System.String,System.Int64,System.String,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Document"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Note">
+            <summary>
+            Represents a note data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Note.Title">
+            <summary>
+            Gets or sets the title.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Note.Text">
+            <summary>
+            Gets or sets the text.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Note.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Note.Header">
+            <inheritdoc/>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Note.SubHeader">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Note.#ctor(System.String,System.String,System.String,System.Int64,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Note"/> without id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Note.#ctor(System.Int32,System.String,System.String,System.String,System.Int64,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Note"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Password">
+            <summary>
+            Represents a password data.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Account">
+            <summary>
+            Gets or sets the account.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Username">
+            <summary>
+            Gets or sets the username.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Notes">
+            <summary>
+            Gets or sets the notes.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.IsViolated">
+            <summary>
+            Gets or sets a value indicating if the password is violated.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.Header">
+            <inheritdoc/>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Password.SubHeader">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Password.#ctor(System.String,System.String,System.Int64,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Password"/> without id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Password.#ctor(System.Int32,System.String,System.String,System.Int64,System.String,System.String,System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Password"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.Report">
+            <summary>
+            Represents a report regarding the passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Id">
+            <summary>
+            Gets or sets the id.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Total">
+            <summary>
+            Gets or sets the number of passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Duplicated">
+            <summary>
+            Gets or sets the number of duplicated passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Weak">
+            <summary>
+            Gets or sets the number of weak passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Old">
+            <summary>
+            Gets or sets the number of old passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Violated">
+            <summary>
+            Gets or sets the number of violated passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.Report.Timestamp">
+            <summary>
+            Gets or sets the timestamp.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Report.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Report"/> without id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.Report.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int64)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.Report"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Data.UserSetting">
+            <summary>
+            Represents an user setting identified by a key and with a string value.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.UserSetting.Key">
+            <summary>
+            Gets or sets the key.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Data.UserSetting.Value">
+            <summary>
+            Gets or sets the value.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Data.UserSetting.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new <see cref="T:Vault.Core.Database.Data.UserSetting"/>.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.DB">
+            <summary>
+            Singleton that manages the database connection and interactions.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Database.DB.Version">
+            <summary>
+            Gets the version of the database manager.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Context">
+            <summary>
+            Gets or sets the informations about the connection to the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.CurrentContext">
+            <summary>
+            Gets the current informations about the connection to the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Connection">
+            <summary>
+            Gets the connection to the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.IsConnected">
+            <summary>
+            Checks if the connection to the database is ok.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.ConnectionException">
+            <summary>
+            Gets the connection exception if there was a connection error.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Database.DB._tables">
+            <summary>
+            List of all the tables.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Cards">
+            <summary>
+            Gets the table for managing the cards.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Categories">
+            <summary>
+            Gets the table for managing the categories.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Documents">
+            <summary>
+            Gets the table for managing the documents.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Notes">
+            <summary>
+            Gets the table for managing the notes.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Passwords">
+            <summary>
+            Gets the table for managing the passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Reports">
+            <summary>
+            Gets the table for managing the reports.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.UserSettings">
+            <summary>
+            Gets the table for managing the user settings.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.WeakPasswords">
+            <summary>
+            Gets the table for managing the weak passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DB.Instance">
+            <summary>
+            Gets the instance of the database manager.<br/>
+            If <see cref="P:Vault.Core.Database.DB.Context"/> is changed, or the instance is not connected to the database,
+            is created a new instance.
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Vault.Core.Database.DB.#ctor(Vault.Core.Database.DBContext)">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Database.DB"/> with the specified <see cref="T:Vault.Core.Database.DBContext"/>.
+            </summary>
+            <exception cref="T:System.ArgumentNullException"></exception>
+        </member>
+        <member name="M:Vault.Core.Database.DB.UpdateDatabase(System.Int32,System.Int32)">
+            <summary>
+            Updates the database from an old version to a new version.
+            </summary>
+            <exception cref="T:System.IO.FileFormatException"></exception>
+        </member>
+        <member name="M:Vault.Core.Database.DB.Dispose">
+            <summary>
+            Closes the connection and clears the instance.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.DB.DisposeInstance">
+            <summary>
+            Disposes the current instance.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.DB.ChangePassword(System.String)">
+            <summary>
+            Changes the password of the database.
+            </summary>
+            <param name="newPassword">New password for the database.</param>
+        </member>
+        <member name="T:Vault.Core.Database.DBContext">
+            <summary>
+            Contains informations about the connection to the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DBContext.DatabasePath">
+            <summary>
+            Gets the path of the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.DBContext.ConnectionString">
+            <summary>
+            Gets the connection string for connecting to the database.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.DBContext.#ctor(System.String,System.String)">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Database.DBContext"/> with the database path and the password.
+            </summary>
+            <param name="databasePath">Path of the database.</param>
+            <param name="password">Password of the database.</param>
+            <exception cref="T:System.ArgumentException"></exception>
+        </member>
+        <member name="M:Vault.Core.Database.DBContext.Equals(System.Object)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.DBContext.Equals(Vault.Core.Database.DBContext)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.DBContext.GetHashCode">
+            <inheritdoc/>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Cards">
+            <summary>
+            Table for managing the cards.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Add(Vault.Core.Database.Data.Card)">
+            <summary>
+            Adds a new card to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Remove(System.Int32)">
+            <summary>
+            Removes the card with the specified id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.GetAll">
+            <summary>
+            Gets all the cards.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Get(System.Int32)">
+            <summary>
+            Gets the card with the specified id.
+            If the card does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Update(Vault.Core.Database.Data.Card)">
+            <summary>
+            Updates the specified card, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Exists(System.Int32)">
+            <summary>
+            Checks if the card with the specified id exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.Count">
+            <summary>
+            Counts the number of cards.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Cards.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a card record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Categories">
+            <summary>
+            Table for managing the categories.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Add(Vault.Core.Database.Data.Category)">
+            <summary>
+            Adds a new category to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Remove(System.String)">
+            <summary>
+            Removes the category with the specified id.
+            If the category cannot be removed, because is used, returns false.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.GetAll">
+            <summary>
+            Gets all the categories.
+            The categories are ordered by ascending with the none category as the first item.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Get(System.String)">
+            <summary>
+            Gets the category with the specified name.
+            If the category does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Update(Vault.Core.Database.Data.Category)">
+            <summary>
+            Updates the specified category, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Update(System.String,Vault.Core.Database.Data.Category)">
+            <summary>
+            Updates the specified category, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Exists(System.String)">
+            <summary>
+            Checks if the category with the specified name exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.Count">
+            <summary>
+            Counts the number of category.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Categories.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a category record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Documents">
+            <summary>
+            Table for managing the documents.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Add(Vault.Core.Database.Data.Document)">
+            <summary>
+            Adds a new document to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Remove(System.Int32)">
+            <summary>
+            Removes the document with the specified id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.GetAll">
+            <summary>
+            Gets all the documents.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Get(System.Int32)">
+            <summary>
+            Gets the document with the specified id.
+            If the document does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Update(Vault.Core.Database.Data.Document)">
+            <summary>
+            Updates the specified document, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Exists(System.Int32)">
+            <summary>
+            Checks if the document with the specified id exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.Count">
+            <summary>
+            Counts the number of documents.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Documents.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a document record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Notes">
+            <summary>
+            Table for managing the notes.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Add(Vault.Core.Database.Data.Note)">
+            <summary>
+            Adds a new note to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Remove(System.Int32)">
+            <summary>
+            Removes the note with the specified id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.GetAll">
+            <summary>
+            Gets all the notes.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Get(System.Int32)">
+            <summary>
+            Gets the note with the specified id.
+            If the note does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Update(Vault.Core.Database.Data.Note)">
+            <summary>
+            Updates the specified note, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Exists(System.Int32)">
+            <summary>
+            Checks if the note with the specified id exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.Count">
+            <summary>
+            Counts the number of notes.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Notes.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a note record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Passwords">
+            <summary>
+            Table for managing the passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Add(Vault.Core.Database.Data.Password)">
+            <summary>
+            Adds a new password to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Remove(System.Int32)">
+            <summary>
+            Removes the password with the specified id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.GetAll">
+            <summary>
+            Gets all the passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Get(System.Int32)">
+            <summary>
+            Gets the password with the specified id.
+            If the password does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Update(Vault.Core.Database.Data.Password)">
+            <summary>
+            Updates the specified password, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Exists(System.Int32)">
+            <summary>
+            Checks if the password with the specified id exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.Count">
+            <summary>
+            Counts the number of passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.DuplicatedCount">
+            <summary>
+            Counts the number of duplicated passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.WeakCount">
+            <summary>
+            Counts the number of weak passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.OldCount(System.UInt64)">
+            <summary>
+            Counts the number of password that older than the time specified.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.ViolatedCount">
+            <summary>
+            Counts the number of violated passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Passwords.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a password record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Reports">
+            <summary>
+            Table for managing the reports.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Add(Vault.Core.Database.Data.Report)">
+            <summary>
+            Adds a new report to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Remove(System.Int32)">
+            <summary>
+            Removes the report with the specified id.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.GetAll">
+            <summary>
+            Gets all the reports.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Get(System.Int32)">
+            <summary>
+            Gets the report with the specified id.
+            If the report does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Update(Vault.Core.Database.Data.Report)">
+            <summary>
+            Updates the specified report, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Exists(System.Int32)">
+            <summary>
+            Checks if the report with the specified id exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.Count">
+            <summary>
+            Counts the number of reports.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Reports.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a report record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.Table">
+            <summary>
+            Defines a table with his essential methods such as create, delete, update.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Database.Tables.Table.DB">
+            <summary>
+            Database instance.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Table.#ctor(Vault.Core.Database.DB)">
+            <summary>
+            Initializes a new table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Table.Create">
+            <summary>
+            Creates the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Table.Delete">
+            <summary>
+            Deletes the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.Table.Update(System.Int32,System.Int32)">
+            <summary>
+            Updates the table from the old version to the new version.
+            </summary>
+            <param name="newVersion">New version of the table.</param>
+            <param name="oldVersion">Old version of the table.</param>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.UserSettings">
+            <summary>
+            Table for managing the user settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Add(Vault.Core.Database.Data.UserSetting)">
+            <summary>
+            Adds a new setting to the table.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Remove(System.String)">
+            <summary>
+            Removes the setting with the specified key.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.GetAll">
+            <summary>
+            Gets all the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Get(System.String)">
+            <summary>
+            Gets the setting with the specified key.
+            If the setting does not exists, returns null.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Update(Vault.Core.Database.Data.UserSetting)">
+            <summary>
+            Updates the specified setting, if exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Exists(System.String)">
+            <summary>
+            Checks if the setting with the specified key exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.Count">
+            <summary>
+            Counts the number of settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.TableExists">
+            <summary>
+            Checks if the table exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.UserSettings.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a setting record from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Database.Tables.WeakPasswords">
+            <summary>
+            Table for managing the weak passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.#ctor(Vault.Core.Database.DB)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Create">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Delete">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Update(System.Int32,System.Int32)">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Add(System.String)">
+            <summary>
+            Adds a new password to the table, if not exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Remove(System.String)">
+            <summary>
+            Removes the specified password.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Clear">
+            <summary>
+            Removes all the passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.GetAll">
+            <summary>
+            Gets all the passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Exists(System.String)">
+            <summary>
+            Checks if the specified password exists.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.Count">
+            <summary>
+            Counts the number of passwords.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Database.Tables.WeakPasswords.ReadRecord(Microsoft.Data.Sqlite.SqliteDataReader)">
+            <summary>
+            Reads a password from the reader.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Encryptor">
+            <summary>
+            Provides utilities to encrypt data.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Encryptor.HASH_SIZE">
+            <summary>
+            Default hash size.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Encryptor.ITERATIONS">
+            <summary>
+            Default iteration count.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Encryptor.GenerateKey(System.Security.SecureString,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Generates a byte hash key from the specified secure string, with the specified salt size, iteration count, and size in byte number.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Encryptor.GenerateSalt(System.Int32)">
+            <summary>
+            Generates a random salt of the specified size in byte number.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Encryptor.ConvertToString(System.Byte[])">
+            <summary>
+            Converts a byte hash key array into a string.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Settings.InstanceSettings">
+            <summary>
+            Settings singleton that manages loading and saving temporary settings for the current instance of the application.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Settings.InstanceSettings.Instance">
+            <summary>
+            Gets the instance of the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Settings.InstanceSettings"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.SetSetting(System.String,System.Object)">
+            <summary>
+            Sets the setting with the specified key to the specified value.
+            (Set null to remove the setting)
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.GetSetting``1(System.String,``0)">
+            <summary>
+            Gets the setting with the specified key, if exists, or the specified default value, otherwise.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.Clear">
+            <summary>
+            Clears the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.Dispose">
+            <summary>
+            Clears the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.InstanceSettings.DisposeInstance">
+            <summary>
+            Disposes the current instance.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Settings.Settings">
+            <summary>
+            Settings singleton that manages loading and saving settings from a json file named "config.json".
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Settings.Settings.settings">
+            <summary>
+            Connection to the json settings file.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Settings.Settings.Instance">
+            <summary>
+            Gets the instance of the settings.
+            The instance is reloaded if the settings are not loaded.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Settings.Settings"/> with a new connection to a settings json file named "config.json".
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Settings.Settings.IsLoaded">
+            <summary>
+            Checks if the settings are loaded correctly.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.SetSetting(System.String,System.Object)">
+            <summary>
+            Sets the setting with the specified key to the specified value.
+            (Set null to remove the setting)
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.GetSetting``1(System.String,``0)">
+            <summary>
+            Gets the setting with the specified key, if exists, or the specified default value, otherwise.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.Reset">
+            <summary>
+            Removes all the settings and recreates the configuration file.<br/>
+            Returns a value indicating if the operation was succesful.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.Save">
+            <summary>
+            Saves the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.Dispose">
+            <summary>
+            Saves the settings and unload this instance.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.Settings.DisposeInstance">
+            <summary>
+            Disposes the current instance.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Settings.SystemSettings">
+            <summary>
+            Settings static class that manages loading and saving settings from the system registry.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Settings.SystemSettings.StartOnStartup">
+            <summary>
+            Gets or sets the setting indicating if the application is setup to start on startup.
+            Returns null if this setting is already used from another application.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Settings.UserSettings">
+            <summary>
+            Settings singleton that manages loading and saving user settings from the user specific database.
+            </summary>
+        </member>
+        <member name="P:Vault.Core.Settings.UserSettings.Instance">
+            <summary>
+            Gets the instance of the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.UserSettings.#ctor">
+            <summary>
+            Initializes a new instance of <see cref="T:Vault.Core.Settings.UserSettings"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.UserSettings.SetSetting(System.String,System.Object)">
+            <summary>
+            Sets the setting with the specified key to the specified value
+            (Set null to remove the setting)
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Settings.UserSettings.GetSetting``1(System.String,``0)">
+            <summary>
+            Gets the setting with the specified key, if exists, or the specified default value, otherwise.
+            </summary>
+        </member>
+        <member name="T:Vault.Core.Utility">
+            <summary>
+            Provides some utility methods.
+            </summary>
+        </member>
+        <member name="F:Vault.Core.Utility.UNIX_DAY_SECONDS">
+            <summary>
+            Gets a value indicating the number of seconds in an unix day.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.FormatDate(System.DateTimeOffset)">
+            <summary>
+            Formats the specified date into a string after converting to local time.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.FormatHeader(System.String,System.Int32)">
+            <summary>
+            Format the header for displaying in the preview list.
+            If the header is null, or empty, returns "...".
+            If the header is too long, returns a substring with "..." in the end.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.FormatCategoryLabel(Vault.Core.Database.Data.Category)">
+            <summary>
+            Format the category label for displaying.
+            If the label is empty, returns the name.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.ComparePasswords(System.Security.SecureString,System.Security.SecureString)">
+            <summary>
+            Compares two secure strings for equality.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.Max(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Returns the max value from 4 int.
+            </summary>
+        </member>
+        <member name="M:Vault.Core.Utility.AnimateBrush(System.Windows.UIElement,System.Windows.DependencyProperty,System.Windows.Media.Brush,System.TimeSpan)">
+            <summary>
+            Animate a <see cref="T:System.Windows.Media.Brush"/> of an <see cref="T:System.Windows.UIElement"/> with a specified time.
+            </summary>
+            <remarks>
+            Note: If the initial <see cref="T:System.Windows.Media.Brush"/> (from) or the final <see cref="T:System.Windows.Media.Brush"/> (to) are <see langword="null"/>, no animation will be executed.
+            </remarks>
+        </member>
+        <member name="M:Vault.Core.Utility.LoadCategoryItems(FullControls.Controls.ComboBoxPlus,System.Windows.Style,System.Collections.Generic.List{Vault.Core.Database.Data.Category})">
+            <summary>
+            Loads the category items in the specified combobox with the specified style for the items.
+            </summary>
+        </member>
+        <member name="T:Vault.CredentialsWindow">
+            <summary>
+            Window for input the credentials.
+            </summary>
+            <summary>
+            CredentialsWindow
+            </summary>
+        </member>
+        <member name="F:Vault.CredentialsWindow.ReauthResult">
+            <summary>
+            ReauthResult: false = failed, true = successful. (default: false)
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.#ctor(Vault.CredentialsWindow.Request)">
+            <summary>
+            Initializes a new <see cref="T:Vault.CredentialsWindow"/> with the specified request.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Reload">
+            <summary>
+            Setups the window for the specified request.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the username if is saved, then setups the window.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the window is closed.
+            Request the shutdown if the window is a login or register window.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.RegisterLink_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Executed when the register label is pressed.
+            Switches the request to registration, then resetups the window.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.LoginLink_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Executed when the login label is pressed.
+            Switches the request to login, then resetups the window.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Window_KeyDown(System.Object,System.Windows.Input.KeyEventArgs)">
+            <summary>
+            Executed when a key is pressed.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Confirm_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the ok button is pressed.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.ExecuteRequest">
+            <summary>
+            Executes the requested request.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.LoginRequest">
+            <summary>
+            Executes the login.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.RegisterRequest">
+            <summary>
+            Executes the registration.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.ReauthenticateRequest">
+            <summary>
+            Executes the registration.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.Login">
+            <summary>
+            Executes the login by starting a new session and loading the home window.
+            </summary>
+        </member>
+        <member name="T:Vault.CredentialsWindow.Request">
+            <summary>
+            Defines the credentials window request types.
+            </summary>
+        </member>
+        <member name="F:Vault.CredentialsWindow.Request.Login">
+            <summary>
+            The window will act as a login window.
+            </summary>
+        </member>
+        <member name="F:Vault.CredentialsWindow.Request.Registration">
+            <summary>
+            The window will act as a registration window.
+            </summary>
+        </member>
+        <member name="F:Vault.CredentialsWindow.Request.Reauthentication">
+            <summary>
+            The window will act as a reauthentication window.
+            </summary>
+        </member>
+        <member name="M:Vault.CredentialsWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.DocumentWindow">
+            <summary>
+            Window for display and edit a document.
+            </summary>
+            <summary>
+            DocumentWindow
+            </summary>
+        </member>
+        <member name="F:Vault.DocumentWindow.Result">
+            <summary>
+            Result: "edited", "deleted", null = nothing. (default: null)
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.#ctor(Vault.Core.Database.Data.Document)">
+            <summary>
+            Initializes a new <see cref="T:Vault.DocumentWindow"/> with the specified document.
+            If the document is null, the window will create a new document, otherwise will display and edit the specified document.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.DocumentWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the document details.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the save button is clicked.
+            Edits the document if is not null, otherwise creates a new document.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the delete button is clicked.
+            Deletes the document if is not null.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.AddDocument">
+            <summary>
+            Adds a new document.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.EditDocument">
+            <summary>
+            Edits the document.
+            </summary>
+        </member>
+        <member name="M:Vault.DocumentWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.HomeWindow">
+            <summary>
+            Home window.
+            </summary>
+            <summary>
+            HomeWindow
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Vault.HomeWindow"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Changes the tray icon type to unlocked, add a listener for the logout by tray, reloads the window.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Removes the listener for the logout by tray, then requests to shut down the application.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.TrayIcon_LogoutClick(System.Object,System.EventArgs)">
+            <summary>
+            Executed when is received the logout command from the tray icon.
+            Executes the logout.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.ExecuteLogout_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when is pressed the logout button.
+            Executes the logout.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Logout">
+            <summary>
+            Changes the tray icon type to locked.
+            Terminates the current session and loads the credentials window, then closes the window.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.ShowCategories_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when is pressed the categories button.
+            Displays the categories window and, if it edits some categories, reloads.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.ShowSettings_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when is pressed the settings button.
+            Displays the settings window.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.ShowReport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when is pressed the report button.
+            Displays the report window.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Reload">
+            <summary>
+            Reloads the window.
+            If no section is loaded, loads the default section.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.LoadSection(System.Int64)">
+            <summary>
+            Loads the specified section and saves remembers it into the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.ReloadCurrentSection">
+            <summary>
+            Reloads the current section.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Navigation_Switch(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when a switcher is clicked.
+            Loads its relative section saved in the tag.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Add_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when is pressed the add button.
+            Displays the edit window for the loaded section and, if it edits, reloads.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.Search_TextChanged(System.Object,System.Windows.Controls.TextChangedEventArgs)">
+            <summary>
+            Executed when the search text is changed.
+            Reloads the current section with the filtered elements.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.DisplayFilteredDatas``1(System.Collections.Generic.List{``0},System.String)">
+            <summary>
+            Displays the datas after filtering them with a search.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.SectionList_ItemIsExpandedChanged(System.Object,FullControls.Common.ItemExpandedChangedEventArgs)">
+            <summary>
+            Executed when an accordion item is expanded or collapsed.
+            Updates the category with the expanding state.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.DataItem_MouseLeftButtonDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Executed when an item in an accordion item is selected.
+            Displays the window for viewing the item info and editing the item.
+            If the item is edited, reloads.
+            </summary>
+        </member>
+        <member name="M:Vault.HomeWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.MessageWindow">
+            <summary>
+            Window for dialog boxes.
+            </summary>
+            <summary>
+            MessageWindow
+            </summary>
+        </member>
+        <member name="P:Vault.MessageWindow.Message">
+            <summary>
+            Gets or sets the message.
+            </summary>
+        </member>
+        <member name="P:Vault.MessageWindow.IconType">
+            <summary>
+            Gets or sets the icon type.
+            </summary>
+        </member>
+        <member name="M:Vault.MessageWindow.#ctor(System.String,System.String,System.Windows.MessageBoxImage)">
+            <summary>
+            Initializes a new <see cref="T:Vault.MessageWindow"/> with a message, a title, and an icon type.
+            </summary>
+        </member>
+        <member name="M:Vault.MessageWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the icon and plays the relative sound.
+            </summary>
+        </member>
+        <member name="M:Vault.MessageWindow.Ok_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the ok button is clicked.
+            Closes the window.
+            </summary>
+        </member>
+        <member name="M:Vault.MessageWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.NoteWindow">
+            <summary>
+            Window for display and edit a note.
+            </summary>
+            <summary>
+            NoteWindow
+            </summary>
+        </member>
+        <member name="F:Vault.NoteWindow.Result">
+            <summary>
+            Result: "edited", "deleted", null = nothing. (default: null)
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.#ctor(Vault.Core.Database.Data.Note)">
+            <summary>
+            Initializes a new <see cref="T:Vault.NoteWindow"/> with the specified note.
+            If the note is null, the window will create a new note, otherwise will display and edit the specified note.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.NoteWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the note details.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the save button is clicked.
+            Edits the note if is not null, otherwise creates a new note.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the delete button is clicked.
+            Deletes the note if is not null.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.AddNote">
+            <summary>
+            Adds a new note.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.EditNote">
+            <summary>
+            Edits the note.
+            </summary>
+        </member>
+        <member name="M:Vault.NoteWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.PasswordWindow">
+            <summary>
+            Window for display and edit a password.
+            </summary>
+            <summary>
+            PasswordWindow
+            </summary>
+        </member>
+        <member name="F:Vault.PasswordWindow.Result">
+            <summary>
+            Result: "edited", "deleted", null = nothing. (default: null)
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.#ctor(Vault.Core.Database.Data.Password)">
+            <summary>
+            Initializes a new <see cref="T:Vault.PasswordWindow"/> with the specified password.
+            If the password is null, the window will create a new password, otherwise will display and edit the specified password.
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.GetResult">
+            <inheritdoc/>
+        </member>
+        <member name="M:Vault.PasswordWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the password details.
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the save button is clicked.
+            Edits the password if is not null, otherwise creates a new password.
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.Delete_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the delete button is clicked.
+            Deletes the password if is not null.
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.PasswordTimestampNow_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the now button is clicked.
+            Sets the date to now.
+            </summary>
+        </member>
+        <member name="M:Vault.PasswordWindow.AddPassword">
+            <summary>
+            Adds a new password.
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:Vault.PasswordWindow.EditPassword">
+            <summary>
+            Edits the password.
+            </summary>
+            <exception cref="T:System.ArgumentException"/>
+        </member>
+        <member name="M:Vault.PasswordWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.Properties.Strings">
+            <summary>
+              Classe di risorse fortemente tipizzata per la ricerca di stringhe localizzate e così via.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ResourceManager">
+            <summary>
+              Restituisce l'istanza di ResourceManager nella cache utilizzata da questa classe.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Culture">
+            <summary>
+              Esegue l'override della proprietà CurrentUICulture del thread corrente per tutte le
+              ricerche di risorse eseguite utilizzando questa classe di risorse fortemente tipizzata.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Account">
+            <summary>
+              Cerca una stringa localizzata simile a Website.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Add">
+            <summary>
+              Cerca una stringa localizzata simile a Add.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.AppLanguage">
+            <summary>
+              Cerca una stringa localizzata simile a Language.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.AppName">
+            <summary>
+              Cerca una stringa localizzata simile a Vault.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CannotCreateDatabase">
+            <summary>
+              Cerca una stringa localizzata simile a Unable to create the data file!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Card">
+            <summary>
+              Cerca una stringa localizzata simile a Card.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Cards">
+            <summary>
+              Cerca una stringa localizzata simile a Cards.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Categories">
+            <summary>
+              Cerca una stringa localizzata simile a Categories.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoriesDescription">
+             <summary>
+               Cerca una stringa localizzata simile a Select a category to edit or delete it.
+            If no category is selected, a new category will be added.
+            Press ENTER to save, or CTRL + ENTER to cancel..
+             </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryDuplicatedAdd">
+            <summary>
+              Cerca una stringa localizzata simile a Is not possible to add the category because a duplicated exists!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryDuplicatedEdit">
+            <summary>
+              Cerca una stringa localizzata simile a Is not possible to edit the category because a duplicated exists!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryLabel">
+            <summary>
+              Cerca una stringa localizzata simile a Category label.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryLabelHint">
+            <summary>
+              Cerca una stringa localizzata simile a Category....
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryName">
+            <summary>
+              Cerca una stringa localizzata simile a Category name (clear to delete).
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryNameHint">
+            <summary>
+              Cerca una stringa localizzata simile a category.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.CategoryUsed">
+            <summary>
+              Cerca una stringa localizzata simile a Is not possible to delete the category because is used!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Code">
+            <summary>
+              Cerca una stringa localizzata simile a Code.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ConfigCorrupted">
+            <summary>
+              Cerca una stringa localizzata simile a The settings file was corrupted, so it was resetted!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ConfigFixed">
+            <summary>
+              Cerca una stringa localizzata simile a The settings file was corrupted, and was not possible to reset it! Will be used the default settings..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Confirm">
+            <summary>
+              Cerca una stringa localizzata simile a Confirm.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ConfirmDelete">
+            <summary>
+              Cerca una stringa localizzata simile a Confirm delete?.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ConfirmPassword">
+            <summary>
+              Cerca una stringa localizzata simile a Confirm password.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Copy">
+            <summary>
+              Cerca una stringa localizzata simile a Copy.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Cvv">
+            <summary>
+              Cerca una stringa localizzata simile a CVV.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Day">
+            <summary>
+              Cerca una stringa localizzata simile a DD.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Document">
+            <summary>
+              Cerca una stringa localizzata simile a Document.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Documents">
+            <summary>
+              Cerca una stringa localizzata simile a Documents.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.enUS">
+            <summary>
+              Cerca una stringa localizzata simile a English.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Error">
+            <summary>
+              Cerca una stringa localizzata simile a Error.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Exit">
+            <summary>
+              Cerca una stringa localizzata simile a Exit.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ExitExplicit">
+            <summary>
+              Cerca una stringa localizzata simile a Hide on close.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ExitExplicitDescription">
+            <summary>
+              Cerca una stringa localizzata simile a The app will be hided without closing if there are no opened windows..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Iban">
+            <summary>
+              Cerca una stringa localizzata simile a Iban.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Info">
+            <summary>
+              Cerca una stringa localizzata simile a Info.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.InvalidCredentials">
+            <summary>
+              Cerca una stringa localizzata simile a Username or password invalid!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.InvalidDate">
+            <summary>
+              Cerca una stringa localizzata simile a The date is not a valid date..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.InvalidPassword">
+            <summary>
+              Cerca una stringa localizzata simile a Wrong password!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.itIT">
+            <summary>
+              Cerca una stringa localizzata simile a Italian.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.LanguageChangedInfo">
+            <summary>
+              Cerca una stringa localizzata simile a Restart the app to change the language..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Login">
+            <summary>
+              Cerca una stringa localizzata simile a Login.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.LoginLink">
+            <summary>
+              Cerca una stringa localizzata simile a Login.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Logout">
+            <summary>
+              Cerca una stringa localizzata simile a Logout.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Month">
+            <summary>
+              Cerca una stringa localizzata simile a MM.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Name">
+            <summary>
+              Cerca una stringa localizzata simile a Name.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.No">
+            <summary>
+              Cerca una stringa localizzata simile a No.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.NoCategory">
+            <summary>
+              Cerca una stringa localizzata simile a No categories!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.NotAvailable">
+            <summary>
+              Cerca una stringa localizzata simile a N/A.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Note">
+            <summary>
+              Cerca una stringa localizzata simile a Note.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Notes">
+            <summary>
+              Cerca una stringa localizzata simile a Notes.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Number">
+            <summary>
+              Cerca una stringa localizzata simile a Number.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Ok">
+            <summary>
+              Cerca una stringa localizzata simile a Ok.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Overwrite">
+            <summary>
+              Cerca una stringa localizzata simile a Overwrite.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Owner">
+            <summary>
+              Cerca una stringa localizzata simile a Owner.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Password">
+            <summary>
+              Cerca una stringa localizzata simile a Password.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.PasswordList">
+            <summary>
+              Cerca una stringa localizzata simile a Password list.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Passwords">
+            <summary>
+              Cerca una stringa localizzata simile a Passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.PasswordsNotMatching">
+            <summary>
+              Cerca una stringa localizzata simile a Passwords does not match!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Reauthenticate">
+            <summary>
+              Cerca una stringa localizzata simile a Require password confirm.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ReauthenticateRequest">
+            <summary>
+              Cerca una stringa localizzata simile a Password required.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Recalculate">
+            <summary>
+              Cerca una stringa localizzata simile a Recalculate.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Register">
+            <summary>
+              Cerca una stringa localizzata simile a Register.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.RegisterLink">
+            <summary>
+              Cerca una stringa localizzata simile a Register.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Remember">
+            <summary>
+              Cerca una stringa localizzata simile a Remember username.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Report">
+            <summary>
+              Cerca una stringa localizzata simile a Security report.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ReportDescription">
+             <summary>
+               Cerca una stringa localizzata simile a Below are shown some security parameters about the saved passwords.
+            These are based on the most common security practices..
+             </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ReportOf">
+            <summary>
+              Cerca una stringa localizzata simile a Report of:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.ReportScoreDescription">
+            <summary>
+              Cerca una stringa localizzata simile a The score is calculated dividing the max issue with the number of passwords and subtracting to 100..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Save">
+            <summary>
+              Cerca una stringa localizzata simile a Save.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Score">
+            <summary>
+              Cerca una stringa localizzata simile a Score.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Search">
+            <summary>
+              Cerca una stringa localizzata simile a Search....
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Settings">
+            <summary>
+              Cerca una stringa localizzata simile a Settings.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Show">
+            <summary>
+              Cerca una stringa localizzata simile a Show.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.StartHided">
+            <summary>
+              Cerca una stringa localizzata simile a Start hided.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.StartHidedDescription">
+            <summary>
+              Cerca una stringa localizzata simile a The app will be started hided on tray..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.StartOnStartup">
+            <summary>
+              Cerca una stringa localizzata simile a Start on Windows startup.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.StartOnStartupDescription">
+            <summary>
+              Cerca una stringa localizzata simile a The app will be started after the Windows startup..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.StartOnStartupUsed">
+            <summary>
+              Cerca una stringa localizzata simile a The autostart is already used from another instance! Overwrite?.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.System">
+            <summary>
+              Cerca una stringa localizzata simile a System.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Title">
+            <summary>
+              Cerca una stringa localizzata simile a Title.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalDuplicatedPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Duplicated passwords:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalDuplicatedPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Number of passwords used for multiple accounts.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalOldPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Old passwords:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalOldPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Number of passwords changed more than 90 days ago.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Total passwords:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Number of passwords in the database.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalViolatedPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Violated passwords:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalViolatedPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Number of passwords marked as violated.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalWeakPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Weak passwords:.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.TotalWeakPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Number of trivial or weak passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Type">
+            <summary>
+              Cerca una stringa localizzata simile a Type.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Uncategorized">
+            <summary>
+              Cerca una stringa localizzata simile a Uncategorized.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.UserAlreadyExists">
+            <summary>
+              Cerca una stringa localizzata simile a User already exists!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Username">
+            <summary>
+              Cerca una stringa localizzata simile a Username.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Violated">
+            <summary>
+              Cerca una stringa localizzata simile a The password has been violated!.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Warning">
+            <summary>
+              Cerca una stringa localizzata simile a Warning.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.WeakPasswords">
+            <summary>
+              Cerca una stringa localizzata simile a Weak passwords.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.WeakPasswordsDescription">
+            <summary>
+              Cerca una stringa localizzata simile a Passwords to avoid, 1 line per password..
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Year">
+            <summary>
+              Cerca una stringa localizzata simile a YYYY.
+            </summary>
+        </member>
+        <member name="P:Vault.Properties.Strings.Yes">
+            <summary>
+              Cerca una stringa localizzata simile a Yes.
+            </summary>
+        </member>
+        <member name="T:Vault.ReportWindow">
+            <summary>
+            Window for managing reports.
+            </summary>
+            <summary>
+            ReportWindow
+            </summary>
+        </member>
+        <member name="F:Vault.ReportWindow.OLD_PASSWORD_DAYS_AFTER">
+            <summary>
+            Gets a value indicating the days after which the password is old.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Vault.ReportWindow"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.NewReport_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the new report button is clicked.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.WeakPasswordsLink_MouseDown(System.Object,System.Windows.Input.MouseButtonEventArgs)">
+            <summary>
+            Executed when the weak passwords link is clicked.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.Reload">
+            <summary>
+            Reloads the window data.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.CalculateScore(Vault.Core.Database.Data.Report)">
+            <summary>
+            Calculates a score from the specified report.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.GenerateReport">
+            <summary>
+            Generates a new report and saves it.
+            </summary>
+        </member>
+        <member name="M:Vault.ReportWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.SettingsWindow">
+            <summary>
+            Window for changing the settings.
+            </summary>
+            <summary>
+            SettingsWindow
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Vault.SettingsWindow"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads all the editable settings values in the window.
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.LoadSettings">
+            <summary>
+            Loads all the editable settings values in the window.
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.Window_Closed(System.Object,System.EventArgs)">
+            <summary>
+            Executed when the window is closed.
+            Saves the settings.
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.LoadLanguage">
+            <summary>
+            Loads the language setting.
+            </summary>
+        </member>
+        <member name="M:Vault.SettingsWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:Vault.WeakPasswordsWindow">
+            <summary>
+            Window for display and edit the weak passwords list.
+            </summary>
+            <summary>
+            WeakPasswordsWindow
+            </summary>
+        </member>
+        <member name="M:Vault.WeakPasswordsWindow.#ctor">
+            <summary>
+            Initializes a new <see cref="T:Vault.WeakPasswordsWindow"/>.
+            </summary>
+        </member>
+        <member name="M:Vault.WeakPasswordsWindow.Window_Loaded(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the window is loaded.
+            Loads the weak passwords list.
+            </summary>
+        </member>
+        <member name="M:Vault.WeakPasswordsWindow.Save_Click(System.Object,System.Windows.RoutedEventArgs)">
+            <summary>
+            Executed when the save button is clicked.
+            Updates the weak passwords list.
+            </summary>
+        </member>
+        <member name="M:Vault.WeakPasswordsWindow.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:XamlGeneratedNamespace.GeneratedInternalTypeHelper">
+            <summary>
+            GeneratedInternalTypeHelper
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateInstance(System.Type,System.Globalization.CultureInfo)">
+            <summary>
+            CreateInstance
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.GetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            GetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.SetPropertyValue(System.Reflection.PropertyInfo,System.Object,System.Object,System.Globalization.CultureInfo)">
+            <summary>
+            SetPropertyValue
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.CreateDelegate(System.Type,System.Object,System.String)">
+            <summary>
+            CreateDelegate
+            </summary>
+        </member>
+        <member name="M:XamlGeneratedNamespace.GeneratedInternalTypeHelper.AddEventHandler(System.Reflection.EventInfo,System.Object,System.Delegate)">
+            <summary>
+            AddEventHandler
+            </summary>
+        </member>
+    </members>
+</doc>

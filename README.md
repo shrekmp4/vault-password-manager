@@ -17,9 +17,8 @@ You can move the executable file and the database file wherever you want and tak
 The database engine used is [sqlcipher](https://github.com/sqlcipher/sqlcipher), an encrypted version of sqlite.  
 
 
-# Open source
-The source code is entirely hosted here, feel free to contribute via pull requests and sending issues.
-This means that there are no hidden things, you can view the entire code, and check it.
+# Open source ?
+The source code is available on my patreon, and if you want you can get a copy by writing to my discord DM, I really want to make this project "Free Source Code", but I don't want them to create vulnerabilities without having it controlled, as I say, this project does not connect to any external server or make shipments, it is all local, and encrypted, with Sqlcipher.
 
 
 # Completely offline

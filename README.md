@@ -30,5 +30,9 @@ Just backup everything into an external pendrive, this app can be loaded also fr
 # Login Preview
 ![Login Preview](https://media.discordapp.net/attachments/1271973792356499620/1287426086698881074/Login.gif?ex=66f1807a&is=66f02efa&hm=e062a4a2c3db8a9fac131fa2dc3b641f6f807a9b0b0324f2ffc1ce74c727e8a1&=)
 
+# Register Preview
+![Register Preview](https://media.discordapp.net/attachments/1271973792356499620/1287426358313484378/Register.gif?ex=66f180bb&is=66f02f3b&hm=bf07b7c016d24a8157115d82ca2479af1e203e193eb31928c0edab1edf1facb4&=)
+
+
 # License
 Copyright (C) 2024 srkdev (shrekmp4)  

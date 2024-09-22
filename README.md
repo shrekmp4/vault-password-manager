@@ -17,7 +17,7 @@ The database engine used is [sqlcipher](https://github.com/sqlcipher/sqlcipher),
 
 
 # Open source ?
-The source code is available on my patreon, and if you want you can get a copy by writing to my discord DM, I really want to make this project "Free Source Code", but I don't want them to create vulnerabilities without having it controlled, as I say, this project does not connect to any external server or make shipments, it is all local, and encrypted, with Sqlcipher.
+Source on this repo :)
 
 
 # Completely offline

@@ -1,4 +1,3 @@
-<a href='https://www.patreon.com/Vainelifee' target="_blank"><img alt='Patreon' src='https://media.discordapp.net/attachments/1271973792356499620/1287480276049723444/developer-preview3.png?ex=66f1b2f2&is=66f06172&hm=b9290ebe9d8ff418ba83fc0d383b76e736a58fde187f027399a1cedbaeff5e68&=&format=webp&quality=lossless&width=550&height=289'/></a>
 # Vault Password Manager🔐
 Portable password manager open source and completely offline.
 

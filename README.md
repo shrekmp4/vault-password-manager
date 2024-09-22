@@ -28,7 +28,7 @@ This also means that if you lost your data no one will be able to retrieve them 
 Just backup everything into an external pendrive, this app can be loaded also from pendrives.
 
 # Login Preview
-![Login Preview](https://media.discordapp.net/attachments/1271973792356499620/1287425288006795304/2024-09-22-16-48-14.gif?ex=66f17fbb&is=66f02e3b&hm=e955746878b4c7c4f301fb6c51834ce3048241201fc935c4204cc0c378313d64&=&width=1193&height=671)
+![Login Preview](https://media.discordapp.net/attachments/1271973792356499620/1287426086698881074/Login.gif?ex=66f1807a&is=66f02efa&hm=e062a4a2c3db8a9fac131fa2dc3b641f6f807a9b0b0324f2ffc1ce74c727e8a1&=)
 
 # License
 Copyright (C) 2024 srkdev (shrekmp4)  

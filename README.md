@@ -1,6 +1,8 @@
 # Vault Password Manager🔐
 Portable password manager open source and completely offline.
 
+(Some gifs are not working)
+
 <a href='https://github.com/shrekmp4/vault/releases/tag/v1.0.0' target="_blank"><img alt='Download' src='https://img.shields.io/badge/Latest_version-100000?style=for-the-badge&logo=Download&logoColor=FF0D0D&labelColor=black&color=FFFFFF'/></a>
 
 
